@@ -342,7 +342,7 @@ class Variable(pd.Series):
             'format': format,
             'informat': informat,
         }
-        super().__init__(data, index, dtype, name, copy, fastpath, **kwds)
+        super().__init__(data=data, index=index, dtype=dtype, name=name, copy=copy, **kwds)
         for name, value in metadata.items():
             if value is not None:
                 setattr(self, name, value)
